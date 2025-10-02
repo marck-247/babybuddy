@@ -53,10 +53,10 @@
             <i class="icon-feeding" aria-hidden="true"></i>
             {% trans "Feeding" %}
         </a>
-        <a class="dropdown-item p-2" href="{% url 'core:bottle-feeding-add' %}">
+        {% comment %} <a class="dropdown-item p-2" href="{% url 'core:bottle-feeding-add' %}">
             <i class="icon-feeding" aria-hidden="true"></i>
             {% trans "Bottle Feeding" %}
-        </a>
+        </a> {% endcomment %}
     {% endif %}
     {% if perms.core.add_pumping %}
         <a class="dropdown-item p-2" href="{% url 'core:pumping-add' %}">
@@ -258,10 +258,10 @@
 </a>
 {% endif %}
 {% if perms.core.add_feeding %}
-<a class="dropdown-item ps-5{% if request.path == '/feedings/bottle/add/' %} active{% endif %}"
+{% comment %} <a class="dropdown-item ps-5{% if request.path == '/feedings/bottle/add/' %} active{% endif %}"
    href="{% url 'core:bottle-feeding-add' %}"><i class="icon-add" aria-hidden="true"></i>
 {% trans "Bottle Feeding" %}
-</a>
+</a> {% endcomment %}
 {% endif %}
 {% if perms.core.view_pumping %}
     <a class="dropdown-item{% if request.path == '/pumping/' %} active{% endif %}"

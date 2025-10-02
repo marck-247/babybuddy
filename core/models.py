@@ -302,9 +302,9 @@ class Feeding(models.Model):
     )
     type = models.CharField(
         choices=[
-            ("breast milk", _("Breast milk")),
+            # ("breast milk", _("Breast milk")),
             ("formula", _("Formula")),
-            ("fortified breast milk", _("Fortified breast milk")),
+            # ("fortified breast milk", _("Fortified breast milk")),
             ("solid food", _("Solid food")),
         ],
         max_length=255,
@@ -313,9 +313,9 @@ class Feeding(models.Model):
     method = models.CharField(
         choices=[
             ("bottle", _("Bottle")),
-            ("left breast", _("Left breast")),
-            ("right breast", _("Right breast")),
-            ("both breasts", _("Both breasts")),
+            # ("left breast", _("Left breast")),
+            # ("right breast", _("Right breast")),
+            # ("both breasts", _("Both breasts")),
             ("parent fed", _("Parent fed")),
             ("self fed", _("Self fed")),
         ],
